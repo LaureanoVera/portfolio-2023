@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #121218;
+  font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-title {
+  position: relative;
+  text-decoration: solid;
+  text-align: center;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  text-shadow: 3px 3px 2px #12121260;
+}
+
+.main-title::after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 0.2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 2.6rem;
+  background-color: #121212;
+  box-shadow: 2px 2px 2px #12121260;
+}
+
+/* ===== ===== HERO ===== ===== */
+.Hero {
+  min-height: 100vh;
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.25rem;
+  background-color: #101010;
+  color: #fafafa;
+}
+
+.Hero__title {
+  font-size: 2.5rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  margin-top: .5rem;
+  text-transform: uppercase;
+  border: 2px solid #fefefe;
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+  box-shadow: 4px 4px 4px #fefefe80;
+}
+
+.Hero__title--shadow {
+  text-shadow: 4px 5px 4px #fafafaa0;
+}
+
+.Hero__info {
+  font-weight: 300;
+  margin: 0 0 .8rem;
+}
+
+.Hero__img {
+  filter: drop-shadow(4px 4px 2px #fafafaa0);
+  width: 80%;
+  align-self: end;
+  margin-right: 1rem;
+  max-width: 540px;
+}
+
+@media screen and (max-width: 425px) {
+  .Hero__title {
+    font-size: 2.1rem;
+    padding: 1.25rem 2.2rem;
+    margin-top: .35rem;
+  }
+}
+/* ===== ===== HERO ===== ===== */
+
+/* ===== ===== ABOUT ===== ===== */
+.About {
+  padding: 3rem 0;
+  min-height: 60vh;
+  background-color: #f9f9f9;
+}
+
+.About__container {
+  min-height: calc(60vh - 8rem);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.About__subtitle {
+  text-transform: uppercase;
+  margin: .8rem 0 .6rem;
+}
+
+.About__career {
+  color: #14aafa;
+  font-weight: 700;
+  text-shadow: 2px 3px 4px #12121230;;
+  margin-bottom: .5rem;
+}
+
+.About__career--text {
+  color: #121212;
+}
+
+.About__location {
+  margin: .35rem 0;
+  opacity: .75;
+}
+
+.About__links {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 25px);
+  gap: 1rem;
+}
+
+.About__link {
+  color: #121212;
+  transition: .23s;
+  font-size: 1.25rem;
+}
+.About__link:hover {
+  color: #14aafa;
+}
+
+.About__list {
+  padding: 0;
+  font-weight: 400;
+  font-size: .94rem;
+}
+
+.About__img {
+  min-width: 260px;
+  max-width: 340px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 8px 8px 2px #12121260;
+}
+
+@media screen and (max-width: 600px) {
+  .About__container {
+    flex-direction: column;
+  }
+
+  .About__career {
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+
+  .About__links {
+    justify-content: center;
+  }
+}
+/* ===== ===== ABOUT ===== ===== */
+
+/* ===== ===== PORTFOLIO ===== ===== */
+.Portfolio {
+  padding: 3rem 0;
+  min-height: 80vh;
+}
+
+.Portfolio__cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.Portfolio__card {
+  width: 260px;
+  text-align: center;
+  box-shadow: 6px 6px 4px #12121240;
+}
+
+.Portfolio__card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.Portfolio__card .info {
+  padding: .5rem;
+}
+
+.Portfolio__card .info h5 {
+  text-transform: uppercase;
+}
+
+.Portfolio__card .info p {
+  font-size: .8rem;
+  margin: .35rem 0;
+  opacity: .8;
+}
+
+.Portfolio__card .info a {
+  border: 1px solid #121212;
+  color: #121212;
+  line-height: 2.4rem;
+  padding: .5rem 1rem;
+  transition: .23s;
+  font-weight: 600;
+}
+
+.Portfolio__card .info a:hover {
+  border: 1px solid #f0f0f0;
+  color: #f0f0f0;
+  background-color: #121212;
+}
+
+@media screen and (max-width:788px) {
+  .Portfolio__cards {
+    /* grid-template-columns: 280px; */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Portfolio__card {
+    width: 280px;
+  }
+}
+
+/* ===== ===== PORTFOLIO ===== ===== */
+
+/* ===== ===== EDUCATION ===== ===== */
+.timeline {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.timeline__items {
+  margin-top: 1rem;
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline__items::before {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #171d32;
+	left: calc(50% - 1px);
+}
+
+.timeline__item {
+  margin-bottom: .75rem;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+
+.timeline__item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline__item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.timeline__dot {
+  height: 16px;
+	width: 16px;
+	background-color: #121212;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px; 
+}
+
+.timeline__date {
+  font-size: 18px;
+	color: #121212;
+	margin:.25rem 0;
+}
+
+.timeline__content {
+  padding: .5rem;
+  border-radius: 8px;
+  color: #121212;
+}
+
+.timeline__content h3 {
+	margin:0 0 .25rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.timeline__content p {
+  font-weight: 400;
+	line-height: 20px;
+}
+
+@media(max-width: 767px){
+	.timeline__items::before{
+		left: 7px;
+	}
+	.timeline__item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline__item:nth-child(odd),
+	.timeline__item:nth-child(even){
+		padding-left: 1.5rem;
+	}
+	.timeline__dot{
+		left:0;
+	}
+}
+/* ===== ===== EDUCATION ===== ===== */
+
+/* ===== ===== MORE ===== ===== */
+.More {
+  min-height: 60vh;
+  background-image: url('./assets/duki.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  text-align: center;
+}
+
+.More__shadow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #12121240;
+  border-radius: .5rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: .3s;
+  color: #fefefe;
+}
+
+.More__text {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 620px) {
+  .More {
+    background-image: url('./assets/duki_responsive.jpg');
+  }
+
+  .More__text {
+    font-size: 1rem;
+  }
+}
+/* ===== ===== MORE ===== ===== */
+
+/* ===== ===== FOOTER ===== ===== */
+.Footer {
+  min-height: 25vh;
+  background-color: #121212;
+  color: #fefefe;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Footer h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.Footer__links.About__links i {
+  color: #fefefe;
+}
+/* ===== ===== FOOTER ===== ===== */
